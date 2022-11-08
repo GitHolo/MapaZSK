@@ -3,16 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class time : MonoBehaviour
+public class date : MonoBehaviour
 {
-    private TMP_Text czas;
+    public TMP_Text czas;
     void Start()
     {
         czas = GetComponent<TextMeshProUGUI>();
-    }
-    void Update()
-    {
-        string time = System.DateTime.UtcNow.ToLocalTime().ToString("HH:mm:ss");
+        string time = System.DateTime.UtcNow.ToLocalTime().ToString("dd MM yyyy");
         print(time);
         czas.text = time;
     }
