@@ -19,8 +19,8 @@ public class plan : MonoBehaviour
         int hourInt = int.Parse(hour);
         int minInt = int.Parse(min);
         hourInt = hourInt * 60;
-        int time = hourInt + minInt-465;
-        int botTime = 654 - time;
+        int time = hourInt + minInt-420;
+        int botTime = 658 - time;
         print(time);
         if(time>0)
         {
