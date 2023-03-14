@@ -17,6 +17,8 @@ public class Godziny : MonoBehaviour
     [SerializeField] public int Lekcja9;
     [SerializeField] public int Lekcja10;
 
+    
+
     private GameObject tekst0;
     private GameObject tekst1;
     private GameObject tekst2;
@@ -67,6 +69,7 @@ public class Godziny : MonoBehaviour
      */
     void Start()
     {
+        new Color(Random.Range(50f, 170f), Random.Range(50f, 170f), Random.Range(50f, 170f), 255);
     }
 
     // Update is called once per frame
@@ -194,7 +197,7 @@ public class Godziny : MonoBehaviour
 
         tekst10 = godz10.transform.GetChild(0).gameObject;
         tekst10.GetComponent<TMP_Text>().text = Lekcje[Lekcja10];
-        switch (Lekcja0)
+        switch (Lekcja10)
         {
             case 21:
                 godz10.GetComponent<Image>().color = Color.clear;
