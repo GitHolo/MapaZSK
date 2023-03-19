@@ -67,9 +67,33 @@ public class Godziny : MonoBehaviour
      * 19="ZRZ",
      * 20=""
      */
+    Dictionary<int, Color> lekcjaColors = new Dictionary<int, Color>();
+    private void Awake()
+    {
+        lekcjaColors.Add(0, new Color(Random.Range(50f, 170f) / 255f, Random.Range(50f, 170f) / 255f, Random.Range(50f, 170f) / 255f, 1f));
+        lekcjaColors.Add(1, new Color(Random.Range(50f, 170f) / 255f, Random.Range(50f, 170f) / 255f, Random.Range(50f, 170f) / 255f, 1f));
+        lekcjaColors.Add(2, new Color(Random.Range(50f, 170f) / 255f, Random.Range(50f, 170f) / 255f, Random.Range(50f, 170f) / 255f, 1f));
+        lekcjaColors.Add(3, new Color(Random.Range(50f, 170f) / 255f, Random.Range(50f, 170f) / 255f, Random.Range(50f, 170f) / 255f, 1f));
+        lekcjaColors.Add(4, new Color(Random.Range(50f, 170f) / 255f, Random.Range(50f, 170f) / 255f, Random.Range(50f, 170f) / 255f, 1f));
+        lekcjaColors.Add(5, new Color(Random.Range(50f, 170f) / 255f, Random.Range(50f, 170f) / 255f, Random.Range(50f, 170f) / 255f, 1f));
+        lekcjaColors.Add(6, new Color(Random.Range(50f, 170f) / 255f, Random.Range(50f, 170f) / 255f, Random.Range(50f, 170f) / 255f, 1f));
+        lekcjaColors.Add(7, new Color(Random.Range(50f, 170f) / 255f, Random.Range(50f, 170f) / 255f, Random.Range(50f, 170f) / 255f, 1f));
+        lekcjaColors.Add(8, new Color(Random.Range(50f, 170f) / 255f, Random.Range(50f, 170f) / 255f, Random.Range(50f, 170f) / 255f, 1f));
+        lekcjaColors.Add(9, new Color(Random.Range(50f, 170f) / 255f, Random.Range(50f, 170f) / 255f, Random.Range(50f, 170f) / 255f, 1f));
+        lekcjaColors.Add(10, new Color(Random.Range(50f, 170f) / 255f, Random.Range(50f, 170f) / 255f, Random.Range(50f, 170f) / 255f, 1f));
+        lekcjaColors.Add(11, new Color(Random.Range(50f, 170f) / 255f, Random.Range(50f, 170f) / 255f, Random.Range(50f, 170f) / 255f, 1f));
+        lekcjaColors.Add(12, new Color(Random.Range(50f, 170f) / 255f, Random.Range(50f, 170f) / 255f, Random.Range(50f, 170f) / 255f, 1f));
+        lekcjaColors.Add(13, new Color(Random.Range(50f, 170f) / 255f, Random.Range(50f, 170f) / 255f, Random.Range(50f, 170f) / 255f, 1f));
+        lekcjaColors.Add(14, new Color(Random.Range(50f, 170f) / 255f, Random.Range(50f, 170f) / 255f, Random.Range(50f, 170f) / 255f, 1f));
+        lekcjaColors.Add(15, new Color(Random.Range(50f, 170f) / 255f, Random.Range(50f, 170f) / 255f, Random.Range(50f, 170f) / 255f, 1f));
+        lekcjaColors.Add(16, new Color(Random.Range(50f, 170f) / 255f, Random.Range(50f, 170f) / 255f, Random.Range(50f, 170f) / 255f, 1f));
+        lekcjaColors.Add(17, new Color(Random.Range(50f, 170f) / 255f, Random.Range(50f, 170f) / 255f, Random.Range(50f, 170f) / 255f, 1f));
+        lekcjaColors.Add(18, new Color(Random.Range(50f, 170f) / 255f, Random.Range(50f, 170f) / 255f, Random.Range(50f, 170f) / 255f, 1f));
+        lekcjaColors.Add(19, new Color(Random.Range(50f, 170f) / 255f, Random.Range(50f, 170f) / 255f, Random.Range(50f, 170f) / 255f, 1f));
+        lekcjaColors.Add(20, new Color(Random.Range(50f, 170f) / 255f, Random.Range(50f, 170f) / 255f, Random.Range(50f, 170f) / 255f, 1f));
+    }
     void Start()
     {
-        new Color(Random.Range(50f, 170f), Random.Range(50f, 170f), Random.Range(50f, 170f), 255);
     }
 
     // Update is called once per frame
@@ -83,7 +107,7 @@ public class Godziny : MonoBehaviour
                 godz0.GetComponent<Image>().color = Color.clear;
                 break;
             default:
-                godz0.GetComponent<Image>().color = new Color(Random.Range(50f, 170f), Random.Range(50f, 170f), Random.Range(50f, 170f), 255);
+                godz0.GetComponent<Image>().color = lekcjaColors[Lekcja0];
                 break;
         }
 
@@ -95,7 +119,7 @@ public class Godziny : MonoBehaviour
                 godz1.GetComponent<Image>().color = Color.clear;
                 break;
             default:
-                godz1.GetComponent<Image>().color = new Color(Random.Range(50f, 170f), Random.Range(50f, 170f), Random.Range(50f, 170f), 255);
+                godz1.GetComponent<Image>().color = lekcjaColors[Lekcja1];
                 break;
         }
 
@@ -107,7 +131,7 @@ public class Godziny : MonoBehaviour
                 godz2.GetComponent<Image>().color = Color.clear;
                 break;
             default:
-                godz2.GetComponent<Image>().color = new Color(Random.Range(50f, 170f), Random.Range(50f, 170f), Random.Range(50f, 170f), 255);
+                godz2.GetComponent<Image>().color = lekcjaColors[Lekcja2];
                 break;
         }
 
@@ -119,7 +143,7 @@ public class Godziny : MonoBehaviour
                 godz3.GetComponent<Image>().color = Color.clear;
                 break;
             default:
-                godz3.GetComponent<Image>().color = new Color(Random.Range(50f, 170f), Random.Range(50f, 170f), Random.Range(50f, 170f), 255);
+                godz3.GetComponent<Image>().color = lekcjaColors[Lekcja3];
                 break;
     
         }
@@ -131,7 +155,7 @@ public class Godziny : MonoBehaviour
                 godz4.GetComponent<Image>().color = Color.clear;
                 break;
             default:
-                godz4.GetComponent<Image>().color = new Color(Random.Range(50f, 170f), Random.Range(50f, 170f), Random.Range(50f, 170f), 255);
+                godz4.GetComponent<Image>().color = lekcjaColors[Lekcja4];
                 break;
         }
 
@@ -143,7 +167,7 @@ public class Godziny : MonoBehaviour
                 godz5.GetComponent<Image>().color = Color.clear;
                 break;
             default:
-                godz5.GetComponent<Image>().color = new Color(Random.Range(50f, 170f), Random.Range(50f, 170f), Random.Range(50f, 170f), 255);
+                godz5.GetComponent<Image>().color = lekcjaColors[Lekcja5];
                 break;
         }
 
@@ -155,7 +179,7 @@ public class Godziny : MonoBehaviour
                 godz6.GetComponent<Image>().color = Color.clear;
                 break;
             default:
-                godz6.GetComponent<Image>().color = new Color(Random.Range(50f, 170f), Random.Range(50f, 170f), Random.Range(50f, 170f), 255);
+                godz6.GetComponent<Image>().color = lekcjaColors[Lekcja6];
                 break;
         }
 
@@ -167,7 +191,7 @@ public class Godziny : MonoBehaviour
                 godz7.GetComponent<Image>().color = Color.clear;
                 break;
             default:
-                godz7.GetComponent<Image>().color = new Color(Random.Range(50f, 170f), Random.Range(50f, 170f), Random.Range(50f, 170f), 255);
+                godz7.GetComponent<Image>().color = lekcjaColors[Lekcja7];
                 break;
         }
 
@@ -179,7 +203,7 @@ public class Godziny : MonoBehaviour
                 godz8.GetComponent<Image>().color = Color.clear;
                 break;
             default:
-                godz8.GetComponent<Image>().color = new Color(Random.Range(50f, 170f), Random.Range(50f, 170f), Random.Range(50f, 170f), 255);
+                godz8.GetComponent<Image>().color = lekcjaColors[Lekcja8];
                 break;
         }
 
@@ -191,7 +215,7 @@ public class Godziny : MonoBehaviour
                 godz9.GetComponent<Image>().color = Color.clear;
                 break;
             default:
-                godz9.GetComponent<Image>().color = new Color(Random.Range(50f, 170f), Random.Range(50f, 170f), Random.Range(50f, 170f), 255);
+                godz9.GetComponent<Image>().color = lekcjaColors[Lekcja9];
                 break;
         }
 
@@ -203,7 +227,7 @@ public class Godziny : MonoBehaviour
                 godz10.GetComponent<Image>().color = Color.clear;
                 break;
             default:
-                godz10.GetComponent<Image>().color = new Color(Random.Range(50f, 170f), Random.Range(50f, 170f), Random.Range(50f, 170f), 255);
+                godz10.GetComponent<Image>().color = lekcjaColors[Lekcja10];
                 break;
         }
     }
