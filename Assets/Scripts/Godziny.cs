@@ -31,6 +31,30 @@ public class Godziny : MonoBehaviour
     private GameObject tekst9;
     private GameObject tekst10;
 
+    private GameObject tekstt0;
+    private GameObject tekstt1;
+    private GameObject tekstt2;
+    private GameObject tekstt3;
+    private GameObject tekstt4;
+    private GameObject tekstt5;
+    private GameObject tekstt6;
+    private GameObject tekstt7;
+    private GameObject tekstt8;
+    private GameObject tekstt9;
+    private GameObject tekstt10;
+
+    [SerializeField] public string Sala0;
+    [SerializeField] public string Sala1;
+    [SerializeField] public string Sala2;
+    [SerializeField] public string Sala3;
+    [SerializeField] public string Sala4;
+    [SerializeField] public string Sala5;
+    [SerializeField] public string Sala6;
+    [SerializeField] public string Sala7;
+    [SerializeField] public string Sala8;
+    [SerializeField] public string Sala9;
+    [SerializeField] public string Sala10;
+
     [SerializeField] private GameObject godz0;
     [SerializeField] private GameObject godz1;
     [SerializeField] private GameObject godz2;
@@ -99,6 +123,8 @@ public class Godziny : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        tekstt0 = godz0.transform.GetChild(1).gameObject;
+        tekstt0.GetComponent<TMP_Text>().text = Sala0;
         tekst0 = godz0.transform.GetChild(0).gameObject;
         tekst0.GetComponent<TMP_Text>().text = Lekcje[Lekcja0];
         switch (Lekcja0)
@@ -111,6 +137,8 @@ public class Godziny : MonoBehaviour
                 break;
         }
 
+        tekstt1 = godz1.transform.GetChild(1).gameObject;
+        tekstt1.GetComponent<TMP_Text>().text = Sala1;
         tekst1 = godz1.transform.GetChild(0).gameObject;
         tekst1.GetComponent<TMP_Text>().text = Lekcje[Lekcja1];
         switch (Lekcja1)
@@ -123,6 +151,8 @@ public class Godziny : MonoBehaviour
                 break;
         }
 
+        tekstt2 = godz2.transform.GetChild(1).gameObject;
+        tekstt2.GetComponent<TMP_Text>().text = Sala2;
         tekst2 = godz2.transform.GetChild(0).gameObject;
         tekst2.GetComponent<TMP_Text>().text = Lekcje[Lekcja2];
         switch (Lekcja2)
@@ -135,6 +165,8 @@ public class Godziny : MonoBehaviour
                 break;
         }
 
+        tekstt3 = godz3.transform.GetChild(1).gameObject;
+        tekstt3.GetComponent<TMP_Text>().text = Sala3;
         tekst3 = godz3.transform.GetChild(0).gameObject;
         tekst3.GetComponent<TMP_Text>().text = Lekcje[Lekcja3];
         switch (Lekcja3)
@@ -147,6 +179,9 @@ public class Godziny : MonoBehaviour
                 break;
     
         }
+
+        tekstt4 = godz4.transform.GetChild(1).gameObject;
+        tekstt4.GetComponent<TMP_Text>().text = Sala4;
         tekst4 = godz4.transform.GetChild(0).gameObject;
         tekst4.GetComponent<TMP_Text>().text = Lekcje[Lekcja4];
         switch (Lekcja4)
@@ -159,6 +194,8 @@ public class Godziny : MonoBehaviour
                 break;
         }
 
+        tekstt5 = godz5.transform.GetChild(1).gameObject;
+        tekstt5.GetComponent<TMP_Text>().text = Sala5;
         tekst5 = godz5.transform.GetChild(0).gameObject;
         tekst5.GetComponent<TMP_Text>().text = Lekcje[Lekcja5];
         switch (Lekcja5)
@@ -171,6 +208,8 @@ public class Godziny : MonoBehaviour
                 break;
         }
 
+        tekstt6 = godz6.transform.GetChild(1).gameObject;
+        tekstt6.GetComponent<TMP_Text>().text = Sala6;
         tekst6 = godz6.transform.GetChild(0).gameObject;
         tekst6.GetComponent<TMP_Text>().text = Lekcje[Lekcja6];
         switch (Lekcja6)
@@ -183,6 +222,8 @@ public class Godziny : MonoBehaviour
                 break;
         }
 
+        tekstt7 = godz7.transform.GetChild(1).gameObject;
+        tekstt7.GetComponent<TMP_Text>().text = Sala7;
         tekst7 = godz7.transform.GetChild(0).gameObject;
         tekst7.GetComponent<TMP_Text>().text = Lekcje[Lekcja7];
         switch (Lekcja7)
@@ -195,6 +236,8 @@ public class Godziny : MonoBehaviour
                 break;
         }
 
+        tekstt8 = godz8.transform.GetChild(1).gameObject;
+        tekstt8.GetComponent<TMP_Text>().text = Sala8;
         tekst8 = godz8.transform.GetChild(0).gameObject;
         tekst8.GetComponent<TMP_Text>().text = Lekcje[Lekcja8];
         switch (Lekcja8)
@@ -207,6 +250,8 @@ public class Godziny : MonoBehaviour
                 break;
         }
 
+        tekstt9 = godz9.transform.GetChild(1).gameObject;
+        tekstt9.GetComponent<TMP_Text>().text = Sala9;
         tekst9 = godz9.transform.GetChild(0).gameObject;
         tekst9.GetComponent<TMP_Text>().text = Lekcje[Lekcja9];
         switch (Lekcja9)
@@ -219,6 +264,8 @@ public class Godziny : MonoBehaviour
                 break;
         }
 
+        tekstt10 = godz10.transform.GetChild(1).gameObject;
+        tekstt10.GetComponent<TMP_Text>().text = Sala10;
         tekst10 = godz10.transform.GetChild(0).gameObject;
         tekst10.GetComponent<TMP_Text>().text = Lekcje[Lekcja10];
         switch (Lekcja10)
@@ -231,8 +278,4 @@ public class Godziny : MonoBehaviour
                 break;
         }
     }
-
-
-
-
 }
